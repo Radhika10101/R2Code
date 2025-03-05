@@ -14,18 +14,29 @@
     />  
   </head>
   <body>
-    <?php
-    include('navbar.php');
-    ?>  
-    <?php include('tes.php'); ?>
+    <div id="navbar"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+    <div id="tes"></div>
+        <script>
+          fetch("tes.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("tes").innerHTML = data);
+        </script>
+    
+
       <main class="content">
         <div class="content-wrapper">
           <section class="tabs">
             <nav class="tab-header">
-              <a href="RingkasanPengembangan.php" class="tab-item active">ringkasan</a>
+              <a href="RingkasanPengembangan.html" class="tab-item active">ringkasan</a>
               <a href="#kurikulum" class="tab-item">kurikulum</a>
-              <a href="PengajarPengembangan.php" class="tab-item">pengajar</a>
-              <a href="FAQs.php" class="tab-item">FAQs</a>
+              <a href="PengajarPengembangan.html" class="tab-item">pengajar</a>
+              <a href="FAQs.html" class="tab-item">FAQs</a>
               <a href="#ulasan" class="tab-item">ulasan</a>
             </nav>
 
@@ -104,9 +115,12 @@
         </div>
       </main>
 
-      <?php
-      include('footer.php');
-      ?>
+      <div id="footer"></div>
+      <script>
+        fetch("footer.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("footer").innerHTML = data);
+      </script>
     </div>
 
 

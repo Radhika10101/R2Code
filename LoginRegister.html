@@ -13,7 +13,12 @@
 </head>
 <body>
 
-  <?php include('navbar.php'); ?>
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
 
 <div class="auth-container" role="main">
   <form class="auth-form-wrapper" aria-labelledby="login-heading">
@@ -272,6 +277,11 @@ function togglePassword(inputId) {
   }
 </style>
 
-<?php include 'footer.php'; ?>
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
 </body>
 </html>

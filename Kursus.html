@@ -15,9 +15,14 @@
   </head>
   <body>
 
-  <?php
-    include('navbar.php');
-    ?>
+    <div id="navbar"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+    
     <main class="listing">
       <section class="listing-main">
         <header class="topheading">
@@ -64,7 +69,7 @@
             <span class="original-price">350,000</span>
             <span class="discounted-price">Gratis</span>
           </div>
-          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='RingkasanPengembangan.php'">Lihat Selengkapnya</button>
+          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='RingkasanPengembangan.html'">Lihat Selengkapnya</button>
           </div>
       </div>
           </article>
@@ -92,7 +97,7 @@
             <span class="original-price">1,525,000</span>
             <span class="discounted-price">Gratis</span>
           </div>
-          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.php'">Lihat Selengkapnya</button>
+          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.html'">Lihat Selengkapnya</button>
           </div>
       </div>
           </article>
@@ -120,7 +125,7 @@
             <span class="original-price">450,000</span>
             <span class="discounted-price">Gratis</span>
           </div>
-          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.php'">Lihat Selengkapnya</button>
+          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.html'">Lihat Selengkapnya</button>
         </div>
       </div>
           </article>
@@ -148,7 +153,7 @@
             <span class="original-price">250,000</span>
             <span class="discounted-price">Gratis</span>
           </div>
-            <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.php'">Lihat Selengkapnya</button>
+            <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.html'">Lihat Selengkapnya</button>
         </div>
       </div>
           </article>
@@ -175,7 +180,7 @@
             <span class="original-price">Rp.50,000</span>
             <span class="discounted-price">Gratis</span>
           </div>
-          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.php'">Lihat Selengkapnya</button>
+          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.html'">Lihat Selengkapnya</button>
         </div>
       </div>
           </article>
@@ -202,7 +207,7 @@
             <span class="original-price">731,000</span>
             <span class="discounted-price">Gratis</span>
           </div>
-          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.php'">Lihat Selengkapnya</button>
+          <button class="view-more-btn" aria-label="View more details about Create an LMS Website with LearnPress" onclick="window.location.href='DetailPengembangan.html'">Lihat Selengkapnya</button>
         </div>
       </div>
           </article>
@@ -366,9 +371,14 @@
         </section>
       </aside>
     </main>
-    <?php
-    include("footer.php");
-    ?>
+    <div id="footer"></div>
+
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    
   </body>
 </html>
 

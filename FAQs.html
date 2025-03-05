@@ -304,17 +304,27 @@
     </style>
   </head>
   <body>
-    <?php include('navbar.php'); ?>
-    <?php include('tes.php'); ?>
+    <div id="navbar"></div>
+    <script>
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+    <div id="tes"></div>
+    <script>
+      fetch("tes.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("tes").innerHTML = data);
+    </script>
     <main class="course-detail">
       <section class="course-content1">
         <div class="course-tabs1">
           <!-- Tab Navigation -->
           <nav class="tab-header">
-            <a href="RingkasanPengembangan.php" class="tab-item">ringkasan</a>
+            <a href="RingkasanPengembangan.html" class="tab-item">ringkasan</a>
             <a href="#kurikulum" class="tab-item">kurikulum</a>
-            <a href="PengajarPengembangan.php" class="tab-item">pengajar</a>
-            <a href="cek.php" class="tab-item active">FAQs</a>
+            <a href="PengajarPengembangan.html" class="tab-item">pengajar</a>
+            <a href="FAQs.html" class="tab-item active">FAQs</a>
             <a href="#ulasan" class="tab-item">ulasan</a>
           </nav>
 

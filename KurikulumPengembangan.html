@@ -6,9 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-include('navbar.php');
-?>
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
   <section class="course-banner">
     <div class="banner-container">
       <div class="course-meta">
@@ -258,7 +261,12 @@ include('navbar.php');
   </section>
 </main>
 
-<?php include 'footer.php'; ?>
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
 <style>
 /* Base styles */
 :root {
